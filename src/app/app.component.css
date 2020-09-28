@@ -1,0 +1,16 @@
+
+.contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cabecera{
+   
+    margin-left: 5%;
+    margin-right: 5%;
+    /*border:1px solid blue;*/
+    display: flex;
+    justify-content: space-between;
+    
+}

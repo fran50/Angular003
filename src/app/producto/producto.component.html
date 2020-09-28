@@ -1,1 +1,10 @@
-<div [ngClass]="{tachado : !bandera}" (click)="bandera =!bandera">producto works!</div>
+
+<div class="caja">
+    <div class="cajaFoto">
+      <img class="foto" [src]="valor.imagen">
+      <div class="icono"><i [ngClass]="{fas : banderaIcono}" (click)="banderaIcono =!banderaIcono"class="far fa-bookmark"></i></div>
+    </div>
+<div class="texto" [ngClass]="{tachado : !bandera}" (click)="bandera =!bandera">{{valor.nombre}}</div>
+<div class="texto">{{valor.direccion}}</div>
+<div class="botton">Agregar</div>
+</div>

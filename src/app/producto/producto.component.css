@@ -1,3 +1,34 @@
 .tachado{
     text-decoration: line-through;
 }
+.caja{
+    margin: 1em;
+    border: 1px solid blue;
+    width: 130px;
+}
+.foto{
+    width: 100%;
+}
+.texto{
+    text-align: center;
+}
+.cajaFoto{
+    position: relative;
+}
+.icono{
+    position: absolute;
+    top:5px;
+    right: 5px;
+    color:blue;
+    cursor: pointer;
+}
+.botton{
+   
+    text-align: center;
+    background-color: blue;
+    color:white;
+    margin: .5em .5em .5em 0.5em;
+    border-radius: 0.25em;
+    padding: 0.25em 0.25em;
+    cursor: pointer;
+}
