@@ -6,5 +6,5 @@
     </div>
 <div class="texto" [ngClass]="{tachado : !bandera}" (click)="bandera =!bandera">{{valor.nombre}}</div>
 <div class="texto">{{valor.direccion}}</div>
-<div class="botton">Agregar</div>
+<div class="botton" (click)="addFavoritos()">Agregar a Favoritos</div>
 </div>

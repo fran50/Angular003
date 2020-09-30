@@ -8,7 +8,8 @@ import {Product} from './product';
 })
 export class AppComponent {
   title = 'ej003';
-
+  longFavoritos: number =0;
+  favoritos: string[]=[];
   misProductos: Product[]=[
     {
       nombre:"Antonio",
@@ -29,7 +30,12 @@ export class AppComponent {
       imagen:'../assets/img/3.jpg'
       }  
 
-  ]
+  ];
+
+  reciboDato(nombre:string){
+   this.favoritos.push(nombre);
+   this.longFavoritos=this.favoritos.length;
+  }
 
 
 }

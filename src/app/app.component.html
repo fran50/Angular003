@@ -1,10 +1,14 @@
 <div class="cabecera">
 
 <div>Mis Clientes ( {{misProductos.length}} )</div>
-<div class="favoritos">Mis Favoritos ( {{misProductos.length}} )</div>
+<div class="favoritos">Mis Favoritos ( {{longFavoritos}} )</div>
 </div>
 <div class="contenedor">
     <div *ngFor="let datosProducto of misProductos">
-     <app-producto [valor]="datosProducto" ></app-producto>
+     <app-producto (enviarDato)="reciboDato($event)" [valor]="datosProducto" ></app-producto>
     </div>
+</div>
+<div *ngFor="let datosFavoritos of favoritos">
+  <div>{{datosFavoritos}}</div>
+
 </div>

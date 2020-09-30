@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input,Output, EventEmitter } from '@angular/core';
 import {Product} from '../product';
 
 @Component({
@@ -8,9 +8,14 @@ import {Product} from '../product';
 })
 export class ProductoComponent implements OnInit {
   @Input() valor: Product;
-  
+  @Output() enviarDato: EventEmitter<any>= new EventEmitter();
  bandera=true;
  banderaIcono=false;
+
+ addFavoritos(){
+   console.log('uno mas en favoritos');
+   this.enviarDato.emit(this.valor.nombre);
+ }
 
   constructor() { }
 
