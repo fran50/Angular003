@@ -1,12 +1,12 @@
 <div class="cabecera">
 
-<div>Mis Clientes ( {{misProductos.length}} )</div>
-<div class="favoritos">Mis Favoritos ( {{longFavoritos}} )</div>
+  <div>Mis Clientes ( {{misProductos.length}} )</div>
+  <div class="favoritos">Mis Favoritos ( {{longFavoritos}} )</div>
 </div>
 <div class="contenedor">
-    <div *ngFor="let datosProducto of misProductos">
-     <app-producto (enviarDato)="reciboDato($event)" [valor]="datosProducto" ></app-producto>
-    </div>
+  <div *ngFor="let datosProducto of misProductos; index as i">
+    <app-producto (enviarDato)="borrarDato($event,i)" [valor]="datosProducto"></app-producto>
+  </div>
 </div>
 <div *ngFor="let datosFavoritos of favoritos">
   <div>{{datosFavoritos}}</div>

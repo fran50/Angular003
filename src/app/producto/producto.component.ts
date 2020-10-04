@@ -1,5 +1,5 @@
-import { Component, OnInit, Input,Output, EventEmitter } from '@angular/core';
-import {Product} from '../product';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Product } from '../product';
 
 @Component({
   selector: 'app-producto',
@@ -8,15 +8,17 @@ import {Product} from '../product';
 })
 export class ProductoComponent implements OnInit {
   @Input() valor: Product;
-  @Output() enviarDato: EventEmitter<any>= new EventEmitter();
- bandera=true;
- banderaIcono=false;
+  @Output() enviarDato: EventEmitter<any> = new EventEmitter();
+  bandera = true;
+  banderaIcono = false;
 
- addFavoritos(){
-   console.log('uno mas en favoritos');
-   this.enviarDato.emit(this.valor.nombre);
- }
-
+  addFavoritos() {
+    console.log('uno mas en favoritos');
+    this.enviarDato.emit(this.valor.nombre);
+  }
+  borrar() {
+    this.enviarDato.emit(this.valor.id);
+  }
   constructor() { }
 
   ngOnInit(): void {

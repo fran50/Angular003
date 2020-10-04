@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ej003"
+    }
+  },
+  "defaultProject": "ej003",
+  "cli": {
+    "analytics": false
+  }
 }
