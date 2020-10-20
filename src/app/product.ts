@@ -4,5 +4,6 @@ export interface Product {
     direccion: string;
     edad: number;
     imagen: string;
+    disponible: boolean;
 
 }

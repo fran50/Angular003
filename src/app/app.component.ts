@@ -16,21 +16,24 @@ export class AppComponent {
       nombre: "Antonio",
       edad: 30,
       direccion: 'Cll/ Medellin Nº12',
-      imagen: '../assets/img/1.jpg'
+      imagen: '../assets/img/1.jpg',
+      disponible:true
     },
     {
       id: 7,
       nombre: "Juan",
-      edad: 48,
+      edad: 18,
       direccion: 'Cll/ Falsa Nº1',
-      imagen: '../assets/img/2.jpg'
+      imagen: '../assets/img/2.jpg',
+      disponible:true
     },
     {
       id: 5,
       nombre: "Lucia",
-      edad: 23,
+      edad: 24,
       direccion: 'Cll/ España Nº10',
-      imagen: '../assets/img/3.jpg'
+      imagen: '../assets/img/3.jpg',
+      disponible:false
     }
 
   ];

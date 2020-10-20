@@ -6,5 +6,20 @@
   </div>
   <div class="texto" [ngClass]="{tachado : !bandera}" (click)="bandera =!bandera">{{valor.nombre}}</div>
   <div class="texto">{{valor.direccion}}</div>
+ <!-- <div *ngIf="valor.disponible" style="background-color: blue;">Disponible</div>
+  <div *ngIf="!valor.disponible"style="background-color: red;" >Nodisponible</div>-->
+ <div *ngIf="valor.disponible; then positivo else negativo"></div>
+ 
+  <ng-template #positivo><div style="background-color: red;">Disponible</div></ng-template>
+  <ng-template #negativo>Nodisponible</ng-template>
+
+  <div [ngSwitch]="valor.edad">
+
+    <div *ngSwitchCase="'18'">Adolescente</div>
+    <div *ngSwitchCase="'24'">Mayor</div>
+    <div *ngSwitchDefault>No se sabe</div>
+  </div>
+ 
   <div class="botton" (click)="borrar()">Agregar a Favoritos</div>
+  <div class="botton" (click)="borrar()">eliminar Cliente</div>
 </div>
